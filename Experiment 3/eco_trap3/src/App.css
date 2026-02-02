@@ -1,0 +1,7 @@
+/* App-specific adjustments (kept small - main styles are in index.css) */
+
+.dashboard{display:flex;gap:16px}
+.main{flex:1}
+
+/* small helpers */
+.btn:disabled{opacity:.6;cursor:not-allowed}

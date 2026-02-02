@@ -1,0 +1,58 @@
+/* Global styles */
+:root{
+  --bg-1: #e6f7f2;
+  --accent: #1db954;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --shadow: 0 8px 24px rgba(10,10,10,0.08);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%;}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#f6fffb 0%, #eef7ff 100%);
+  color: #0f172a;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{color:inherit;text-decoration:none}
+
+/* utility */
+.app-container{max-width:1100px;margin:24px auto;padding:0 16px}
+.card{background:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);padding:18px}
+.muted{color:var(--muted)}
+.center-card{max-width:420px;margin:24px auto;padding:28px;text-align:center}
+
+/* Header */
+.site-header{background:transparent;padding:16px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{margin:0;color:#065f46;font-weight:700}
+.nav{display:flex;gap:12px;align-items:center}
+.nav-link{padding:8px 12px;border-radius:8px;color:#065f46}
+.nav-link:hover{background:rgba(6,95,70,0.06)}
+.nav-link.auth{border:1px solid rgba(6,95,70,0.12);padding:6px 10px}
+
+/* Grid */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.stat-value{font-size:1.7rem;margin:8px 0}
+
+/* Analytics */
+.chart-placeholder{height:240px;border-radius:8px;background:linear-gradient(180deg,#f7fbff,#eef5ff);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+/* Logs */
+.logs-page .controls{text-align:center;margin:18px 0}
+.logs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.log-item{display:flex;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-top:8px;background:#f8fafc}
+.log-item.high{border-left:4px solid #ef4444}
+.log-item.low{border-left:4px solid #10b981}
+.error{color:#ef4444}
+
+/* Buttons */
+.btn{padding:8px 14px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);cursor:pointer;background:#fff}
+.btn.primary{background:var(--accent);color:#fff;border:none}
+
+@media (max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+}
